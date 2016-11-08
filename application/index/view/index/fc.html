@@ -1,0 +1,30 @@
+
+
+{volist name='data' id='words'}
+<div class="comment" id='comm'>
+    <h5 class="title fn">
+        <font color="#FF0000">{$words.create_time}</font>
+        {$words.username}
+    </h5>
+    <div class="content">
+        {$words.content}		
+        <div id="reply_677" style="display:none"></div>
+    </div>
+    <hr />
+</div>
+{/volist}
+<div class="container">
+<div id="pages">
+    <nav>
+        <ul class="pagination pagination-lg">
+        <?php
+       
+            for($i=1;$i<=$pagenum;$i++):?>
+            
+                <li><a onclick="Jumppage(<?php echo $i; ?>)" href="javascript:void(0);">{$i}</a></li> 
+            
+            <?php endfor;?>
+        </ul>
+    </nav>
+</div>
+</div>
